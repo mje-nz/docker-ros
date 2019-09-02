@@ -33,4 +33,6 @@ RUN apt-get update && \
     zsh -i -c : && \
 	rm -rf /var/lib/apt/lists/*
 
+COPY ./entrypoint.zsh /
+ENTRYPOINT ["/entrypoint.zsh"]
 CMD ["zsh"]
